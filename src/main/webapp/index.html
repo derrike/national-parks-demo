@@ -81,7 +81,7 @@
                     nationalPark.zipCode + "</br>";
 
             markerArray[i] = L.marker(
-                    [nationalPark.location.coordinates[1], nationalPark.location.coordinates[0]], { icon: L.icon({ iconUrl: 'images/redicon.png', iconAnchor: [12.5,40]}) }).bindPopup(popupInformation);
+                    [nationalPark.location.coordinates[1], nationalPark.location.coordinates[0]], { icon: L.icon({ iconUrl: 'images/greenicon.png', iconAnchor: [12.5,40]}) }).bindPopup(popupInformation);
         }
 
         markerLayerGroup = L.layerGroup(markerArray).addTo(map);
