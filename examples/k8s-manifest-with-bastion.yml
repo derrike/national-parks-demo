@@ -109,7 +109,7 @@ spec:
         fsGroup: 42
       containers:
       - name: national-parks-app
-        image: jvogtacr.azurecr.io/national-parks:7.0.0
+        image: derrike.azurecr.io/national-parks:7.0.0
         args:
         - --peer
         - hab-bastion
