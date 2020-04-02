@@ -50,8 +50,8 @@ spec:
         env:
           - name: HAB_LICENSE
             value: "accept-no-persist"
-
-
+      imagePullSecrets:
+      - name: acr-secret
 
 ---
 apiVersion: apps/v1
@@ -87,7 +87,8 @@ spec:
             value: "accept-no-persist"
           - name: HAB_MONGODB
             value: '{"mongod": {"net": {"bind_ip": "0.0.0.0"}, "security":{"cluster_auth_mode": ""}}}'
-
+      imagePullSecrets:
+      - name: acr-secret
 
 
 ---
@@ -109,7 +110,7 @@ spec:
         fsGroup: 42
       containers:
       - name: national-parks-app
-        image: derrike.azurecr.io/national-parks:7.0.0
+        image: derrike.azurecr.io/national-parks:7.1.0
         args:
         - --peer
         - hab-bastion
@@ -123,7 +124,8 @@ spec:
         env:
           - name: HAB_LICENSE
             value: "accept-no-persist"
-
+      imagePullSecrets:
+      - name: acr-secret
 
 
 ---
@@ -134,7 +136,7 @@ metadata:
 spec:
   selector:
     app: national-parks-app
-  type: LoadBalancer
+  type: NodePort
   ports:
   - name: web
     targetPort: 8080
