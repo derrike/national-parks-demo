@@ -4665,18 +4665,5 @@
     "Latitude": 37.240801,
     "Longitude": -112.941626,
     "Location":{"coordinates": [-112.941626,37.240801],"type":"Point"}
-  },
-  {
-    "Location Number": "UOTP",
-    "Location Name": "Universal Studios Orlando Theme Park",
-    "Address": "6000 Universal Blvd",
-    "City": "Orlando",
-    "State": "Florida",
-    "Zip Code": 32819,
-    "Phone Number": 0,
-    "Fax Number": "(407) 363-8000",
-    "Latitude": 28.4706677,
-    "Longitude": -81.4784477,
-    "Location":{"coordinates": [-81.4784477,28.4706677],"type":"Point"}
   }
 ]
